@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>course page</title>
+</head>
+
+<body>
+<div>
+{% if course%}
+<h1>{{course.name}} students</h1>
+	{% if students%}
+ 		<ul>
+ 		{% for s in students%}
+ 		<li><a href="{{s.url}}">{{s.name}}</li>
+ 		{% endfor %}
+ 		</ul>
+ 	{% else %}
+ 		<strong>no students registered for this course.</strong>
+ 	{% endif %}
+{% else %}
+	This specified course does not exist.
+{% endif %}
+</div>
+</body>
+</html>

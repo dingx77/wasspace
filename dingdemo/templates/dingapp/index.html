@@ -12,6 +12,19 @@
 hello, welcome to the page! <br />
 <strong>{{ boldmessage }}</strong><br />
 </div>
+
+ <div>
+ {% if courses%}
+ <ul>
+ {% for crs in courses%}
+ <li><a href="/dingapp/course/{{crs.slug }}/">{{ crs.name}}</a></li>
+ {% endfor %}
+ </ul>
+ {% else %}
+ <strong>There are no courses present.</strong>
+ {% endif %}
+ </div>
+
 <div>
 <a href="/dingapp/about">About</a>
 <br />

@@ -20,6 +20,7 @@ app_name = 'dingapp'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('about', views.about, name='about'),
+    path('about/', views.about, name='about'),
+    path('course/<slug:course_name_slug>/', views.show_course, name='show_course'),
     
 ]
